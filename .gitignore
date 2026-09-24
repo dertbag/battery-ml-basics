@@ -3,3 +3,7 @@ __pycache__/
 .ipynb_checkpoints/
 *.pyc
 .env
+.venv/
+rul_results.multibattery.npz
+soh_results.npz
+tcn_results_multibattery.npz
