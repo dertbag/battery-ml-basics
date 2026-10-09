@@ -1,0 +1,16 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# raw data and big intermediate files (re-create them with the scripts)
+data/raw/
+stage1_out/
+results/dataset.csv
+results/predictions_subset.csv.gz
+results*/dataset.csv
+results*/predictions_subset.csv.gz
+
+# files from other projects or mistakes
+_misc/

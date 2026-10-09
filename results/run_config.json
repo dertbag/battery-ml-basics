@@ -1,0 +1,29 @@
+{
+  "args": {
+    "dataset": "results/dataset.csv",
+    "out": "results",
+    "preset": "quick",
+    "families": "cell50,cell,temp,condition,time",
+    "models": "all",
+    "n_jobs": 4,
+    "repeats": 10,
+    "gpr_splits": 5,
+    "no_common_rows": false
+  },
+  "cfg": {
+    "repeats": 10,
+    "svr_stride": 6,
+    "gpr_max_train": 600,
+    "gpr_max_splits": 5,
+    "mlp_ensemble": 1,
+    "xgb_jobs": 1
+  },
+  "n_rows": 22221,
+  "n_cells": 66,
+  "python": "3.12.7",
+  "pandas": "3.0.6",
+  "numpy": "2.2.6",
+  "sklearn": "1.9.1",
+  "xgboost": "3.4.1",
+  "seconds": 276.4
+}

@@ -7,3 +7,14 @@ __pycache__/
 rul_results.multibattery.npz
 soh_results.npz
 tcn_results_multibattery.npz
+data/raw/
+stage1_out/
+results/dataset.csv
+results/predictions_subset.csv.gz
+.venv/
+__pycache__/
+.DS_Store
+_misc/
+
+*.zip
+stage0_output.txt

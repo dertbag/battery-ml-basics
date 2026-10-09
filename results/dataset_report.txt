@@ -1,0 +1,39 @@
+cycles.csv: 22914 cycles from 66 files; relax_long.csv: 322063 rows
+
+=== filters (cycles dropped at each step) ===
+start: 22914 cycles
+  - filename not parsed: 0
+  - no capacity (no discharge): 1
+  - capacity outside window: 273
+  - rest rows != 14: 415
+  - rest not on 120 s grid / voltage out of range: 2
+kept: 22223 cycles
+
+=== kept cycles per condition (cells / cycles) ===
+                  cells  cycles  soh_min  soh_max
+condition                                        
+T25_chg0.25_dis1      7    1822    0.714    0.934
+T25_chg0.5_dis1      19    3271    0.715    0.940
+T25_chg1_dis1         9     254    0.715    0.905
+T35_chg0.5_dis1       3    1112    0.715    0.950
+T45_chg0.5_dis1      28   15764    0.714    0.961
+
+cells with data: 66; cycles per cell: min 20, median 200, max 800
+
+=== ECM fit quality ===
+fit ok (RMSE < 3 mV): 22221 of 22223 (100.0%)
+fit RMSE quantiles (mV): 50%=0.060, 90%=0.085, 99%=0.119
+  OCV: median 4.148, 5%..95% = 4.136 .. 4.164
+  R0: median 0.0647, 5%..95% = 0.04382 .. 0.09936
+  R1: median 0.06259, 5%..95% = 0.04696 .. 0.08421
+  R2: median 0.1598, 5%..95% = 0.1026 .. 0.2023
+  C1: median 3070, 5%..95% = 2347 .. 3896
+  C2: median 7225, 5%..95% = 5512 .. 1.23e+04
+
+=== capacity jumps > 30 mAh between consecutive kept cycles: 5 (details in jump_check.csv) ===
+                            cell_id  cycle  cap_after_mAh   v13  Var  d_cap_mAh  d_v13_mV  d_Var_pct  cycles_since_prev_kept
+Dataset_1_NCA_battery/CY25-025_1-#1    237       2925.454 4.152  0.0     56.756    -0.236     -0.084                     1.0
+ Dataset_1_NCA_battery/CY45-05_1-#2    633       2602.165 4.146  0.0     36.555    -0.157      0.146                     1.0
+Dataset_1_NCA_battery/CY45-05_1-#11    431       2713.316 4.151  0.0     34.896    -0.985      5.027                     1.0
+Dataset_1_NCA_battery/CY25-025_1-#1    238       2956.317 4.155  0.0     30.863     3.386    -13.377                     1.0
+Dataset_1_NCA_battery/CY45-05_1-#25    217       3022.794 4.160  0.0     30.439    -0.157      1.270                     1.0
